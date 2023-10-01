@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Author list</h1>
+{% if author_list %}
+<div class="list-group">
+    {% for author in author_list %}
+        <a href="{{ author.get_absolute_url }}" class="list-group-item">{{ author.last_name }}, {{ author.first_name }}</a>
+    {% endfor %}
+</div>
+{% else %}
+    <p>There are no authors.</p>
+{% endif %}
+<p></p>
+<a href="{% url 'author-create' %}" class="btn btn-primary" role="button">Add new author</a>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1> {{ genre.description }} </h1>
+
+    <div>
+        <a href="{% url 'genre-delete' genre.id %}" class="btn btn-primary B1" role="button">Delete genre</a>
+        <a href="{% url 'genre-update' genre.id %}" class="btn btn-primary" role="button">Update genre</a>
+    </div>
+
+{% endblock %}
+
+

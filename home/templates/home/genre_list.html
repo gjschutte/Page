@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Quote list</h1>
+{% if genre_list %}
+<div class="list-group">
+    {% for genre in genre_list %}
+        <a href="{{ genre.get_absolute_url }}" class="list-group-item">{{ genre.description }}</a>
+    {% endfor %}
+</div>
+{% else %}
+    <p>There are no genres.</p>
+{% endif %}
+
+<p></p>
+<a href="{% url 'genre-create' %}" class="btn btn-primary" role="button">Add new genre</a>
+ 
+{% endblock %}
+

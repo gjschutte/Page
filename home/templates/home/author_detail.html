@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1> {{ author.first_name }} {{ author.last_name }} </h1>
+
+    <div>
+        <a href="{% url 'author-delete' author.id %}" class="btn btn-primary B1" role="button">Delete author</a>
+        <a href="{% url 'author-update' author.id %}" class="btn btn-primary" role="button">Update author</a>
+    </div>
+    
+{% endblock %}
+

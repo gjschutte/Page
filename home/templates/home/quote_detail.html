@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1> {{ quote.description }} </h1>
+    <p><strong>Author:</strong> <a href="">{{ quote.author }}</a></p>
+    <p><strong>Genre:</strong> {{ quote.genre }}</p>
+
+    <div>
+        <a href="{% url 'quote-delete' quote.id %}" class="btn btn-primary B1" role="button">Delete quote</a>
+        <a href="{% url 'quote-update' quote.id %}" class="btn btn-primary" role="button">Update quote</a>
+    </div>
+
+{% endblock %}
+

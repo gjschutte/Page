@@ -1,0 +1,28 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+Home page
+{% endblock %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Hello, this is my home page</h1>
+<p>Welcome to my home page, a website developed in order to test some techniques.</p>
+<h2>Random quote</h2>
+<p id="quoteBox">
+    <i>{{ rand_quote }}</i> - {{ rand_author }}
+</p>
+<h2>Dynamic content</h2>
+<p>This site has the following record counts:</p>
+<ul>
+    <li><strong>Quotes:</strong> {{ num_quotes }}</li>
+    <li><strong>Authors:</strong> {{ num_authors }}</li>
+    <li><strong>Genres:</strong> {{ num_genres }}</li>
+    <li><strong>Number of visits:</strong> {{ num_visits }}</li>
+</ul>
+
+{% endblock %}
