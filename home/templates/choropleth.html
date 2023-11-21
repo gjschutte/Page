@@ -1,0 +1,37 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+Visualization - Choropleth
+{% endblock %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/choropleth.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script src="{% static 'javascript/choropleth.js' %}"></script>
+
+
+<h1>Data visualization with d3.js</h1>
+<h3>Choropleth</h3>
+
+<p>On these pages, you can find some examples with data visualization, with the help
+of the Javascript library d3.js. I learned this library on <a href = "https://www.freecodecamp.org/learn">Free Code Camp</a>, 
+a great site for learning to code!</p>
+<p></p>
+<p>The fourth example is a Choropleth; data visualized on a map. This is the <a href =
+"https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-choropleth-map">
+fourth challenge on Free Code Camp</a>. </p>
+
+<p>Challenges in this example are:</p>
+<ul>
+    <li>Working with geodata: here topojson is used.</li>
+    <li>Combining two datasests.</li>
+</ul>
+<div id=container align="center"></div>
+{% endblock %}

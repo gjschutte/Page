@@ -1,0 +1,67 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+Visualization - Treemap
+{% endblock %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/treemap.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{% static 'javascript/treemap.js' %}"></script>
+
+
+<h1>Data visualization with d3.js</h1>
+<h3>Treemap</h3>
+
+<p>On these pages, you can find some examples with data visualization, with the help
+of the Javascript library d3.js. I learned this library on <a href = "https://www.freecodecamp.org/learn">Free Code Camp</a>, 
+a great site for learning to code!</p>
+<p></p>
+<p>The fifth example is a Treemap; a totally different kind of visualization. A treemap recursively subdivides area into 
+    rectangles according to each node’s associated value. This is the <a href =
+"https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-treemap-diagram">
+fifth challenge on Free Code Camp</a>. </p>
+
+<p>Challenges in this example are:</p>
+<ul>
+    <li>Using the treemap method.</li>
+    <li>Getting the text fitting in the cells.</li>
+</ul>
+
+<div id = "page">
+    <form id = "data-selector">
+        <label class = "radio-inline">
+            <input type = "radio" name = "optradio" checked value = "games">Games
+        </label>
+        <label class = "radio-inline">
+            <input type = "radio" name = "optradio" value = "movies">Movies
+        </label>
+        <label class = "radio-inline">
+            <input type = "radio" name = "optradio" value = "kickstarters">Kickstarters
+        </label>
+        <p></p>
+        <label for = "graphStyle">Choose a style for the graph:</label>
+        <select name="graphStyle" id = "graphStyle">
+            <option value=0 selected=""selected">Binary</option>
+            <option value=1>Squarify</option>
+            <option value=2>Slice - Dice</option>
+            <option value=3>Slice</option>
+            <option value=4>Dice</option>
+        </select>
+    </form>
+    <h1 id="title"></h1>
+    <p id="description"></p>
+    <div id="container"></div>
+    <div id="legend"></div>
+</div>
+
+<scri
+{% endblock %}

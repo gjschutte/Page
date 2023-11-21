@@ -1,0 +1,36 @@
+* {
+    font-family: sans-serif;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tooltip {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0.8;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px black;
+    text-align: center;
+    font-size: 10px;
+}
+
+#title {
+    text-anchor: middle;
+    font-size: 22px;
+}
+
+#chart {
+    background-color: lightgreen;
+    box-shadow: 0 0 10px black;
+}
+
+#legend-label {
+    text-anchor: end;
+    font-size: 0.8em;
+}
+

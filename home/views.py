@@ -112,5 +112,23 @@ def scatterplot (request):
 
     return render(request, 'scatterplot.html', context = context)
 
+def heatmap (request):
+    """View function for the heatmap page """
 
-    
+    context = {}
+
+    return render(request, 'heatmap.html', context = context)
+   
+def choropleth (request):
+    """View function for the choropleth page """
+
+    context = {}
+
+    return render(request, 'choropleth.html', context=context)
+
+def treemap (request):
+    """ View function for the treemap page """
+
+    context = {}
+
+    return render (request, "treemap.html", context = context)

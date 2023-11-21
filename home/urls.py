@@ -20,4 +20,7 @@ urlpatterns = [
     path('genre/<int:pk>/delete/', views.GenreDelete.as_view(), name='genre-delete'),
     path('barchart/', views.barchart, name='barchart'),
     path('scatterplot', views.scatterplot, name='scatterplot'),
+    path('heatmap', views.heatmap, name='heatmap'),
+    path('choropleth', views.choropleth, name='choropleth'),
+    path('treemap/', views.treemap, name='treemap'),
 ]
